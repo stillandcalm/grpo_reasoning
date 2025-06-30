@@ -1,8 +1,8 @@
 # Group Relative Policy Optimization for Chain-of-Thought Reasoning: A Deep Dive into GRPO-CoT
 
-## Introduction: The Power of Showing Your Work
+## Introduction: 
 
-Hello, I'm going to walk you through Group Relative Policy Optimization (GRPO) and how we've implemented it for Chain-of-Thought reasoning. GRPO got introduced by DeepSeek, and as you may have seen, DeepSeek introduced a really powerful reasoning model with very few parameters. So this method is what made it work so well.
+Will walk you through Group Relative Policy Optimization (GRPO) and how I have implemented it for Chain-of-Thought reasoning. GRPO got introduced by DeepSeek, and as you may have seen, DeepSeek introduced a really powerful reasoning model with very few parameters. So this method is what made it work so well.
 
 Let me start with a problem we'll use throughout this paper:
 **Solve for x in the equation 2x + 4 = 10**
@@ -396,7 +396,6 @@ GRPO is a powerful method that combines the best of reinforcement learning with 
 
 The key insight is this: don't just reward correct answers - reward the entire thinking process. When you combine this with technical innovations like advantage normalization, ratio clipping, and KL regularization, you get a training method that can push models beyond human-level reasoning ability while maintaining transparency.
 
-That's GRPO - turning language models into thoughtful problem solvers, one step at a time.
 
 ---
 # grpo_reasoning
