@@ -44,7 +44,7 @@ Whereas reinforcement learning has no limit. It can really come up with reasonin
 ## The GRPO Loss Function: Breaking Down the "Big Ugly Formula"
 
 Okay, so that was the overview, but now let me get into the details of GRPO. Let's look at the loss function:
-
+![GRPO Formula](1.png)
 ```
 L = E_π[Σ_t min(π_θ(a_t|s_t)/π_θ_old(a_t|s_t) × Â_t, clip(π_θ(a_t|s_t)/π_θ_old(a_t|s_t), 1-ε, 1+ε) × Â_t)] - β*D_KL[π_θ||π_θ_old]
 ```
