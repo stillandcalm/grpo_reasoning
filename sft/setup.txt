@@ -1,0 +1,4 @@
+#both nodes
+
+apt update && apt install -y ninja-build
+
