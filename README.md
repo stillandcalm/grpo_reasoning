@@ -1,5 +1,7 @@
 # Group Relative Policy Optimization for Chain-of-Thought Reasoning: A Deep Dive into GRPO-CoT
 
+# With Single/Multi GPU nodes using Deepspeed
+
 ## Introduction: 
 
 Will walk you through Group Relative Policy Optimization (GRPO) and how I have implemented it for Chain-of-Thought reasoning. GRPO got introduced by DeepSeek, and as you may have seen, DeepSeek introduced a really powerful reasoning model with very few parameters. So this method is what made it work so well.
