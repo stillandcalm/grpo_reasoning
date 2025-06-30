@@ -1,6 +1,6 @@
 # Group Relative Policy Optimization for Chain-of-Thought Reasoning: A Deep Dive into GRPO-CoT
 
-# With Single/Multi GPU nodes using Deepspeed
+## With Single/Multi GPU/ Multi-node cluster on Runpod using Deepspeed
 
 ## Introduction: 
 
