@@ -49,21 +49,21 @@ Okay, so that was the overview, but now let me get into the details of GRPO. Let
 L = E_π[Σ_t min(π_θ(a_t|s_t)/π_θ_old(a_t|s_t) × Â_t, clip(π_θ(a_t|s_t)/π_θ_old(a_t|s_t), 1-ε, 1+ε) × Â_t)] - β*D_KL[π_θ||π_θ_old]
 ```
 
-Now this looks very ugly, but I promise we're going to go over every single detail of this formula and you're going to notice that it's actually pretty simple. So when you see formulas like this, don't get scared. It's a cryptic way to convey some really nice ideas.
+This looks very ugly, but we're going to go over every single detail of this formula and you're going to notice that it's actually pretty simple. When you see formulas like this, don't get scared. It's a cryptic way to convey some really nice ideas.
 
 ### Part 1: Average Over All Responses (E_π)
 
-Let's go for the easy part. That first expectation E_π - well, that's just the average over all the responses the computer gives you. The computer gives you a thousand responses? Then you just add all the scores and divide by 1,000.
+Let's go over the easy part. That first expectation E_π - well, that's just the average over all the responses the computer gives you. The computer gives you a thousand responses? Then you just add all the scores and divide by 1,000.
 
 ### Part 2: Average Over All Steps (Σ_t)
 
-What does the summation do? Well, let's say that you have an answer with 10 steps. The last one is the answer. So we simply score each step, including the answer, and then divide by 10, which is the number of steps in this case. That's the aggregation part.
+What does the summation do? Let's say that you have an answer with 10 steps. The last one is the answer. So we simply score each step, including the answer, and then divide by 10, which is the number of steps in this case. That's the aggregation part.
 
 ### Part 3: The Probability Ratio (π_θ/π_θ_old)
 
 This over here is the probability of a new response divided by the probability of an old response. Let me explain this in detail.
 
-Let's say we have our problem: Solve x in the equation 2x + 4 = 10. The model outputs solutions with probabilities. For example, when the model said the answer is x = 2, what happens is that it provided a bunch of probabilities for possible answers. Let's say for simplicity that the possible answers are 2, 3, and 4 for x.
+Let's say we have: Solve x in the equation 2x + 4 = 10. The model outputs solutions with probabilities. For example, when the model said the answer is x = 2, what happens is that it provided a bunch of probabilities for possible answers. Let's say for simplicity that the possible answers are 2, 3, and 4 for x.
 
 **Before Training (Old Policy):**
 - P(x=2) = 0.6 (wrong answer, high probability - bad!)
