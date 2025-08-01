@@ -49,7 +49,7 @@ Okay, so that was the overview, but now let me get into the details of GRPO. Let
 L = E_π[Σ_t min(π_θ(a_t|s_t)/π_θ_old(a_t|s_t) × Â_t, clip(π_θ(a_t|s_t)/π_θ_old(a_t|s_t), 1-ε, 1+ε) × Â_t)] - β*D_KL[π_θ||π_θ_old]
 ```
 
-This looks very ugly, but we're going to go over every single detail of this formula and you're going to notice that it's actually pretty simple. When you see formulas like this, don't get scared. It's a cryptic way to convey some really nice ideas.
+This looks very ugly bit it's actually pretty simpl. It's a cryptic way to convey some really nice ideas.
 
 ### Part 1: Average Over All Responses (E_π)
 
